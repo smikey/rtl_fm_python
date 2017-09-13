@@ -52,6 +52,11 @@ def web_set_human_frequency(f):
 	set_freq_human(str(f))
 	return web_state()
 
+@app.route('/squelch/<int:s>')
+def web_set_squelch(s):
+	set_squelch(s)
+	return web_state()
+
 @app.route('/demod/<c>')
 def web_set_demod(c):
 	set_demod(str(c))
